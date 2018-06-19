@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>List</title>
+	</head>
+	<body>
+		<table>
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Mail</th>
+					<th>Registered</th>
+					<th>Access</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="l : ${logs}" >
+					<td th:text="${{l.user.name}}" ></td>
+					<td th:text="${{l.user.mail}}" ></td>
+					<td th:text="${{l.user.registerDate}}" ></td>
+					<td th:text="${{l.date}}" ></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>
